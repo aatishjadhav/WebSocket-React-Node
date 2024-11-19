@@ -231,10 +231,15 @@ export default function App() {
   return (
     <div className="p-4 space-y-4">
       <h1 className="text-2xl font-bold text-center">Black Friday & Cyber Monday Dashboard</h1>
+      <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
+        <div
+          className="bg-blue-500 h-4 rounded-full"
+          style={{ width: `${(elapsedTime / 96) * 100}%` }}
+        ></div>
+      </div>
       
       
-      
-      <p className="text-center">Elapsed Time: {elapsedTime.toFixed(2)} hours / 96 hours</p>
+      <p className="text-center">Elapsed Time: {progressPercentage.toFixed(2)} hours / 96 hours</p>
 
       {/* Statistics grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
