@@ -233,6 +233,8 @@ const targetData = {
   loyaltyPointEarn: 100000000,
   loyaltyPointRedeem: 70000000,
   orderPlacedUsingLoyaltyPoint: 100000,
+  orderPlacedUsingCashback: 100000,
+  orderPlacedUsingStoreCredit: 200000,
 };
 
 
@@ -246,6 +248,8 @@ let data = {
   loyaltyPointEarn: 0,
   loyaltyPointRedeem: 0,
   orderPlacedUsingLoyaltyPoint: 0,
+  orderPlacedUsingCashback: 0,
+  orderPlacedUsingStoreCredit: 0,
 };
 
 
@@ -264,6 +268,8 @@ const incrementSteps = {
   loyaltyPointEarn: targetData.loyaltyPointEarn / totalUpdates,
   loyaltyPointRedeem: targetData.loyaltyPointRedeem / totalUpdates,
   orderPlacedUsingLoyaltyPoint: targetData.orderPlacedUsingLoyaltyPoint / totalUpdates,
+  orderPlacedUsingCashback: targetData.orderPlacedUsingCashback / totalUpdates,
+  orderPlacedUsingStoreCredit: targetData. orderPlacedUsingStoreCredit / totalUpdates,
 };
 
 
@@ -278,6 +284,8 @@ const updateData = () => {
     loyaltyPointEarn: Math.min(data.loyaltyPointEarn + incrementSteps.loyaltyPointEarn, targetData.loyaltyPointEarn),
     loyaltyPointRedeem: Math.min(data.loyaltyPointRedeem + incrementSteps.loyaltyPointRedeem, targetData.loyaltyPointRedeem),
     orderPlacedUsingLoyaltyPoint: Math.min(data.orderPlacedUsingLoyaltyPoint + incrementSteps.orderPlacedUsingLoyaltyPoint, targetData.orderPlacedUsingLoyaltyPoint),
+    orderPlacedUsingCashback: Math.min(data.orderPlacedUsingCashback + incrementSteps.orderPlacedUsingCashback, targetData.orderPlacedUsingCashback),
+    orderPlacedUsingStoreCredit: Math.min(data.orderPlacedUsingStoreCredit + incrementSteps.orderPlacedUsingStoreCredit, targetData.orderPlacedUsingStoreCredit),
   };
 };
 
